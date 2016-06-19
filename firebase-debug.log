@@ -1,0 +1,144 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/bin/nodejs /usr/bin/firebase login
+[debug] CLI Version:  3.0.2
+[debug] Platform:     linux
+[debug] Node Version: v4.4.4
+[debug] Time:         Sun Jun 19 2016 20:21:56 GMT+0200 (CEST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] 
+[info] Visit this URL on any device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase&response_type=code&state=571983735&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] ✔  Success! Logged in as btsijtsma@gmail.com
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/bin/nodejs /usr/bin/firebase init
+[debug] CLI Version:  3.0.2
+[debug] Platform:     linux
+[debug] Node Version: v4.4.4
+[debug] Time:         Sun Jun 19 2016 20:23:24 GMT+0200 (CEST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/sf_shared/firebaseiot
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Database Setup
+[info] 
+[info] Firebase Realtime Database Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to. You can keep
+[info] these rules in your project directory and publish them with firebase deploy.
+[info] 
+[info] ✔  Wrote database.rules.json
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] ✔  Wrote public/404.html
+[info] ✔  Wrote public/index.html
+[info] 
+=== Project Setup
+[info] 
+[info] Now that your Firebase project directory is set up, it's time to associate
+[info] it with a project. You can create multiple project aliases by running
+[info] firebase use --add, but for now we'll just set up a default project.
+[info] 
+[debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] i  Writing configuration info to firebase.json...
+[info] i  Writing project information to .firebaserc...
+[info] 
+[info] ✔  Firebase initialization complete!
+[debug] Error: ETXTBSY: text file is busy, unlink '/media/sf_shared/firebaseiot/firebase-debug.log'
+    at Error (native)
+    at Object.fs.unlinkSync (fs.js:932:18)
+    at process.<anonymous> (/usr/lib/node_modules/firebase-tools/bin/firebase:60:8)
+    at emitOne (events.js:82:20)
+    at process.emit (events.js:169:7)
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/bin/nodejs /usr/bin/firebase serve
+[debug] CLI Version:  3.0.2
+[debug] Platform:     linux
+[debug] Node Version: v4.4.4
+[debug] Time:         Sun Jun 19 2016 20:25:29 GMT+0200 (CEST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /media/sf_shared/firebaseiot
+[info] Public Directory: public
+[info] 
+[info] Server listening at: http://localhost:5000
+[info] Shutting down...
+[info] Shutting down...
+[info] Shutting down...
+[info] Shutting down...
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/bin/nodejs /usr/bin/firebase deploy
+[debug] CLI Version:  3.0.2
+[debug] Platform:     linux
+[debug] Node Version: v4.4.4
+[debug] Time:         Sun Jun 19 2016 20:42:48 GMT+0200 (CEST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/iottesting-98cb6 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/iottesting-98cb6/tokens 
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'iottesting-98cb6'...
+[info] 
+[info] i  deploying database, hosting
+[info] i  hosting: preparing public directory for upload...
+[debug] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/iottesting-98cb6/uploads/-KKdyDJ7k04VLknSzUQI?fileCount=20&message= 
+[debug] <<< HTTP RESPONSE 200
+[info] ✔  hosting: 20 files uploaded successfully
+[info] i  starting release process (may take several minutes)...
+[debug] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/iottesting-98cb6/releases
+[debug] <<< HTTP RESPONSE 200
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Hosting Site: https://iottesting-98cb6.firebaseapp.com
+[info] Dashboard: https://console.firebase.google.com/project/iottesting-98cb6/overview
+[info] 
+[info] Visit the URL above or run firebase open
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/bin/nodejs /usr/bin/firebase serve
+[debug] CLI Version:  3.0.2
+[debug] Platform:     linux
+[debug] Node Version: v4.4.4
+[debug] Time:         Sun Jun 19 2016 20:45:11 GMT+0200 (CEST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /media/sf_shared/firebaseiot
+[info] Public Directory: public
+[info] 
+[info] Server listening at: http://localhost:5000
