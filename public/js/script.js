@@ -9,16 +9,18 @@ firebase.initializeApp(config);
 
 function writeData() {
   var id = Date.now();
+  var dataone = document.getElementById("sampledatatwo").value;
+  var datatwo = document.getElementById("sampledataone").value;
   firebase.database().ref('test/'+id).set({
-    data: 'hello',
-    stuff: 'things'
-  })
+    dataone: dataone,
+    datatwo: datatwo
+  });
 }
 
 firebase.database().ref('test/').on('value', function(snapshot) {
   console.log(snapshot.val());
   element = document.getElementById("datacontainer");
-  element.innerHTML += '<p>'+JSON.stringify(snapshot.val())+'</p>';
+  element.innerHTML = '<p>'+JSON.stringify(snapshot.val())+'</p>';
 });
 
 writeData(1);
